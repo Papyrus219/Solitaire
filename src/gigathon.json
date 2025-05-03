@@ -1,0 +1,8 @@
+{
+    "KPlugin": {
+        "Description": "Gigathon",
+        "Name": "Gigathon"
+    },
+    "X-KDevelop-Category": "Global",
+    "X-KDevelop-Mode": "GUI"
+}
