@@ -18,11 +18,12 @@ namespace sol
         virtual bool Is_add_correct(std::vector<TCard> *moved_cards) override;
         virtual void Take_cards(std::vector<TCard> *moved_cards, int amount_of_card_taken=1) override;
         virtual void Add_cards(std::vector<TCard> *moved_cards) override;
+        bool Show_more_cards();
 
     private:
-        std::queue<TCard> Hiden_cards;
-        std::vector<TCard> Visible_cards;
-        int dificulty; //0-easy, 1-hard
+        std::queue<TCard> Hidden_cards;
+        std::stack<TCard> Visible_cards;
+        int difficulty; //0-easy, 1-hard
     };
 }
 
