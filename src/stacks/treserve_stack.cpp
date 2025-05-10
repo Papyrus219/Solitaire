@@ -1,5 +1,10 @@
 #include "treserve_stack.h"
 
+sol::TReserve_stack::TReserve_stack(int dificulty, std::queue<TCard> cards): TCard_stack({}), Hidden_cards{cards}, difficulty{dificulty}
+{
+
+}
+
 bool sol::TReserve_stack::Is_take_correct(int amount_of_card_taken)
 {
     if(Visible_cards.size() > 0)

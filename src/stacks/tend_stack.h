@@ -11,7 +11,7 @@ namespace sol
     class TEnd_stack : public TCard_stack
     {
     public:
-        TEnd_stack(std::vector<std::wstring> card_order, std::wstring type);
+        TEnd_stack(std::vector<std::wstring> card_order, std::wstring type, std::vector<std::wstring> symbols);
 
         virtual bool Is_add_correct(std::vector<TCard> *moved_cards) override;
         virtual bool Is_take_correct(int amount_of_card_taken) override;

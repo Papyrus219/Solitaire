@@ -14,7 +14,6 @@ sol::TDeck::TDeck(std::vector<std::wstring> types, std::vector<std::wstring> sym
     }
 }
 
-
 void sol::TDeck::Shufle()
 {
     std::vector<TCard> To_shufle{};

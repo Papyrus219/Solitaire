@@ -13,6 +13,7 @@ namespace sol
     class TReserve_stack : public TCard_stack
     {
     public:
+        TReserve_stack(int dificulty, std::queue<TCard> cards);
 
         virtual bool Is_take_correct(int amount_of_card_taken) override;
         virtual bool Is_add_correct(std::vector<TCard> *moved_cards) override;
