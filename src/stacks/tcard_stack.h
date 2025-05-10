@@ -19,6 +19,8 @@ namespace sol
         virtual bool Is_take_correct(int amount_of_card_taken) = 0;
         int Get_card_possition_in_order(TCard &card);
 
+        virtual ~TCard_stack() = default;
+
     protected:
         std::stack<TCard> Cards_in_stack;
         std::vector<std::wstring> Card_order;

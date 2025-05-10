@@ -14,6 +14,8 @@ namespace sol
         TDeck(std::vector<std::wstring> types, std::vector<std::wstring> symbols);
 
         void Shufle();
+        void Set_Colors(std::vector<std::string> colors, std::vector<std::vector<std::wstring>> symbols);
+
         std::stack<TCard> Cards;
         std::vector<std::wstring> Card_types;
         std::vector<std::wstring> Card_symbols;
