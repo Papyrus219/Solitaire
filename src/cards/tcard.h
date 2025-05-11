@@ -28,6 +28,15 @@ namespace sol
         friend std::wostream &operator<<(std::wostream &wcout, TCard &card);
     };
 
+    std::wostream &operator<<(std::wostream &wcout, TCard &card)
+    {
+        std::locale::global(std::locale(""));
+        std::wcout.imbue(std::locale());
+
+        wcout << std::wstring(card.symbol + card.type);
+
+        return wcout;
+    }
 }
 
 #endif // TCARD_H

@@ -1,6 +1,8 @@
 #include "tboard.h"
 
-sol::TBoard::TBoard()
+using namespace sol;
+
+TBoard::TBoard()
 {
 
 }

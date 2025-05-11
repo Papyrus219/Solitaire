@@ -10,6 +10,8 @@ namespace sol
     class TPlayer
     {
     public:
+        int Used_moves;
+
         void Undo_move();
         bool Move_cards();
     };

@@ -30,3 +30,21 @@ void sol::TDeck::Shufle()
     for(auto card : To_shufle)
         Cards.push(card);
 }
+
+void sol::TDeck::Set_Colors(std::vector<std::string> colors, std::vector<std::vector<std::wstring>> symbols)
+{
+    std::stack<TCard> tmp_stack;
+
+    while(!Cards.empty())
+    {
+        Cards.top().Set_Colors(colors,symbols);
+        tmp_stack.push(Cards.top());
+        Cards.pop();
+    }
+
+    while(!tmp_stack.empty())
+    {
+        Cards.push(tmp_stack.top());
+        tmp_stack.pop();
+    }
+}
