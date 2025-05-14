@@ -19,9 +19,5 @@ int main()
 
     dealer.Deal(board,board_factory,deck,0);
 
-    auto middle_ptr = board.get_middle_stacks_const_ptr();
-
-    auto (*middle_ptr)[0].Get_visible_cards_const_ptr();
-
     return 0;
 }

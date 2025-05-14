@@ -15,9 +15,9 @@ namespace sol
     {
     public:
         TBoard();
-        const std::vector<TReserve_stack>* get_reserve_stacks_const_ptr() {return &Reserve_stacks;};
-        const std::vector<TMiddle_stack>* get_middle_stacks_const_ptr() {return &Middle_stacks;};
-        const std::vector<TEnd_stack>* get_end_stacks_const_ptr() {return &End_stacks;};
+        const std::vector<TReserve_stack>* get_reserve_stacks_const_ptr() const {return &Reserve_stacks;};
+        const std::vector<TMiddle_stack>* get_middle_stacks_const_ptr() const {return &Middle_stacks;};
+        const std::vector<TEnd_stack>* get_end_stacks_const_ptr() const {return &End_stacks;};
 
     private:
         std::vector<TReserve_stack> Reserve_stacks{};

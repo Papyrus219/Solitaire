@@ -18,7 +18,8 @@ namespace sol
         virtual void Take_cards(std::vector<TCard> *moved_cards, int amount_of_card_taken=1) override;
         virtual void Add_cards(std::vector<TCard> *moved_cards) override;
 
-        std::wstring Get_type(){return type;};
+        std::wstring Get_type() const {return type;};
+        const std::stack<TCard>* Get_stack_constptr() const {return &Cards_in_stack;};
 
     private:
         std::wstring type;

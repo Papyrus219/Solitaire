@@ -19,8 +19,8 @@ namespace sol
         virtual void Take_cards(std::vector<TCard> *moved_cards, int amount_of_card_taken=1) override;
         virtual void Add_cards(std::vector<TCard> *moved_cards) override;
 
-        const std::vector<TCard>* Get_visible_cards_const_ptr() {return &Visible_cards;};
-        const std::stack<TCard>* Get_hidden_cards_const_ptr() {return &Hidden_cards;};
+        const std::vector<TCard>* Get_visible_cards_const_ptr() const {return &Visible_cards;};
+        const std::stack<TCard>* Get_hidden_cards_const_ptr() const {return &Hidden_cards;};
 
     private:
         void Check_and_show_hidden_card();

@@ -21,9 +21,12 @@ namespace sol
         virtual void Add_cards(std::vector<TCard> *moved_cards) override;
         bool Show_more_cards();
 
+        const std::queue<TCard>* Get_hidden_cards_const_ptr() const {return &Hidden_cards;};
+        const std::vector<TCard>* Get_vissible_cards_const_ptr() const {return &Visible_cards;};
+
     private:
         std::queue<TCard> Hidden_cards;
-        std::stack<TCard> Visible_cards;
+        std::vector<TCard> Visible_cards;
         int difficulty; //0-easy, 1-hard
     };
 }
