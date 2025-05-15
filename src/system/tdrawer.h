@@ -7,11 +7,12 @@ namespace sol
 {
 
 /**
- * @todo write docs
+ * Class that draw stuff on screen.
  */
     class TDrawer
     {
-        void Draw_Board(TBoard &board);
+    public:
+        void Draw_solitare_board(TBoard &board);
     };
 
 }

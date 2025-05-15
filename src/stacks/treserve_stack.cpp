@@ -20,8 +20,8 @@ bool sol::TReserve_stack::Is_add_correct(std::vector<TCard> *moved_cards)
 
 void sol::TReserve_stack::Take_cards(std::vector< sol::TCard > *moved_cards, int amount_of_card_taken)
 {
-    moved_cards->push_back(Visible_cards.top());
-    Visible_cards.pop();
+    moved_cards->push_back(Visible_cards[Visible_cards.size()-1]);
+    Visible_cards.pop_back();
 }
 
 void sol::TReserve_stack::Add_cards(std::vector< sol::TCard > *moved_cards)
@@ -33,8 +33,8 @@ bool sol::TReserve_stack::Show_more_cards()
 {
     while(!Visible_cards.empty())
     {
-        Hidden_cards.push(Visible_cards.top());
-        Visible_cards.pop();
+        Hidden_cards.push(Visible_cards[Visible_cards.size()-1]);
+        Visible_cards.pop_back();
     }
 
     switch(difficulty)
@@ -42,7 +42,7 @@ bool sol::TReserve_stack::Show_more_cards()
         case 0:
             if(Hidden_cards.size() > 0)
             {
-                Visible_cards.push(Hidden_cards.front());
+                Visible_cards.push_back(Hidden_cards.front());
                 Hidden_cards.pop();
             }
             else
@@ -53,7 +53,7 @@ bool sol::TReserve_stack::Show_more_cards()
         case 1:
             for(int i=0;(i<3 && i<Hidden_cards.size());i++)
             {
-                Visible_cards.push(Hidden_cards.front());
+                Visible_cards.push_back(Hidden_cards.front());
                 Hidden_cards.pop();
             }
     }

@@ -5,9 +5,13 @@
 #include"environmment/tboard.h"
 #include"dealers/tsolitare_dealer.h"
 #include"factories/tboard_factory.h"
+#include"system/tdrawer.h"
 
 int main()
 {
+    std::locale::global(std::locale(""));
+    std::wcout.imbue(std::locale());
+
     sol::TDeck deck{{L"♥",L"♦",L"♠",L"♣"},{L"A",L"1",L"2",L"3",L"4",L"5",L"6",L"7",L"8",L"9",L"10",L"J",L"Q",L"K"}};
     deck.Set_Colors({"red","black"},{{L"♥",L"♦"},{L"♠",L"♣"}});
     deck.Shufle();
@@ -16,8 +20,10 @@ int main()
     sol::TBoard board;
 
     sol::TSolitare_dealer dealer;
-
     dealer.Deal(board,board_factory,deck,0);
+
+    sol::TDrawer drawer;
+    drawer.Draw_solitare_board(board);
 
     return 0;
 }

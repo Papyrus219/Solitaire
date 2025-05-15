@@ -25,3 +25,10 @@ void sol::TCard::Set_Colors(std::vector<std::string> colors, std::vector<std::ve
         }
     }
 }
+
+std::wostream &sol::operator<<(std::wostream &wcout, const sol::TCard &card)
+{
+    wcout << std::wstring(card.Get_symbol() + card.Get_type());
+
+    return wcout;
+}
