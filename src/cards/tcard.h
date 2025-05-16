@@ -7,28 +7,27 @@
 
 namespace sol
 {
-
     class TCard
     {
     public:
-        TCard(std::wstring temp_symbol, std::wstring temp_type);
+        TCard(std::string temp_symbol, std::string temp_type);
         TCard(const TCard& other);
 
-        void Set_Colors(std::vector<std::string> colors, std::vector<std::vector<std::wstring>> symbols);
+        void Set_Colors(std::vector<std::string> colors, std::vector<std::vector<std::string>> types);
 
-        std::wstring Get_symbol() const {return symbol;};
-        std::wstring Get_type() const {return type;};
-        std::string Get_color() const{return color;};
+        std::string Get_symbol() const {return symbol;};
+        std::string Get_type() const {return type;};
+        std::string Get_color() const {return color;};
 
     protected:
-        std::wstring symbol;
-        std::wstring type;
+        std::string symbol;
+        std::string type;
         std::string color{""};
 
-        friend std::wostream &operator<<(std::wostream &wcout, TCard &card);
+        friend std::ostream & operator<<(std::ostream& cout, sol::TCard &card);
     };
-
-    std::wostream &operator<<(std::wostream &wcout, const TCard &card);
 }
+
+std::ostream & operator<<(std::ostream& cout, const sol::TCard &card);
 
 #endif // TCARD_H

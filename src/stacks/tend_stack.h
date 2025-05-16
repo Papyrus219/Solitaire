@@ -11,18 +11,18 @@ namespace sol
     class TEnd_stack : public TCard_stack
     {
     public:
-        TEnd_stack(std::vector<std::wstring> card_order, std::wstring type, std::vector<std::wstring> symbols);
+        TEnd_stack(std::vector<std::string> card_order, std::string type, std::vector<std::string> symbols);
 
         virtual bool Is_add_correct(std::vector<TCard> *moved_cards) override;
         virtual bool Is_take_correct(int amount_of_card_taken) override;
         virtual void Take_cards(std::vector<TCard> *moved_cards, int amount_of_card_taken=1) override;
         virtual void Add_cards(std::vector<TCard> *moved_cards) override;
 
-        std::wstring Get_type() const {return type;};
+        std::string Get_type() const {return type;};
         const std::stack<TCard>* Get_stack_constptr() const {return &Cards_in_stack;};
 
     private:
-        std::wstring type;
+        std::string type;
     };
 }
 

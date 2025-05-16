@@ -2,13 +2,13 @@
 
 void sol::TSolitare_dealer::Deal(TBoard& board, TBoard_factory& factory, TDeck& deck, int game_dificulty)
 {
-    std::vector<std::wstring> end_card_order{L"A",L"1",L"2",L"3",L"4",L"5",L"6",L"7",L"8",L"9",L"10",L"J",L"Q",L"K"};
-    std::vector<std::wstring> middle_card_order{L"K",L"Q",L"J",L"10",L"9",L"8",L"7",L"6",L"5",L"4",L"3",L"2",L"1",L"A"};
-    std::vector<std::wstring> types{L"♥",L"♦",L"♠",L"♣"};
+    std::vector<std::string> end_card_order{"A","2","3","4","5","6","7","8","9","10","J","Q","K"};
+    std::vector<std::string> middle_card_order{"K","Q","J","10","9","8","7","6","5","4","3","2","A"};
+    std::vector<std::string> types{"♥","♦","♠","♣"};
 
     for(int i=0;i<4;i++)
     {
-        factory.Create_End_stack(board,end_card_order,types[i],{L"A"});
+        factory.Create_End_stack(board,end_card_order,types[i],{"A"});
     }
 
     for(int i=1;i<=7;i++)

@@ -3,13 +3,13 @@
 #include<random>
 #include"tdeck.h"
 
-sol::TDeck::TDeck(std::vector<std::wstring> types, std::vector<std::wstring> symbols): Card_types{types},Card_symbols{symbols}
+sol::TDeck::TDeck(std::vector<std::string> types, std::vector<std::string> symbols): Card_types{types},Card_symbols{symbols}
 {
     for(auto type : types)
     {
         for(auto symbol : symbols)
         {
-            this->Cards.push(TCard{symbol,type});
+            Cards.push(TCard{symbol,type});
         }
     }
 }
@@ -31,13 +31,13 @@ void sol::TDeck::Shufle()
         Cards.push(card);
 }
 
-void sol::TDeck::Set_Colors(std::vector<std::string> colors, std::vector<std::vector<std::wstring>> symbols)
+void sol::TDeck::Set_Colors(std::vector<std::string> colors, std::vector<std::vector<std::string>> types)
 {
     std::stack<TCard> tmp_stack;
 
     while(!Cards.empty())
     {
-        Cards.top().Set_Colors(colors,symbols);
+        Cards.top().Set_Colors(colors,types);
         tmp_stack.push(Cards.top());
         Cards.pop();
     }

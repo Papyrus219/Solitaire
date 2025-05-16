@@ -1,6 +1,6 @@
 #include "tend_stack.h"
 
-sol::TEnd_stack::TEnd_stack(std::vector<std::wstring> card_order, std::wstring type, std::vector<std::wstring> symbols): TCard_stack{card_order}, type{type}
+sol::TEnd_stack::TEnd_stack(std::vector<std::string> card_order, std::string type, std::vector<std::string> symbols): TCard_stack{card_order}, type{type}
 {
     for(auto symbol : symbols)
         Cards_in_stack.push(TCard{symbol,type});

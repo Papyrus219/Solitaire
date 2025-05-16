@@ -12,7 +12,7 @@ namespace sol
     class TMiddle_stack : public TCard_stack
     {
     public:
-        TMiddle_stack(std::vector<std::wstring> card_order, std::vector<TCard> visible_cards, std::stack<TCard> hidden_cards);
+        TMiddle_stack(std::vector<std::string> card_order, std::vector<TCard> visible_cards, std::stack<TCard> hidden_cards);
 
         virtual bool Is_add_correct(std::vector<TCard> *moved_cards) override;
         virtual bool Is_take_correct(int amount_of_card_taken) override;

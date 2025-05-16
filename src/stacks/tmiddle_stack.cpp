@@ -1,6 +1,6 @@
 #include "tmiddle_stack.h"
 
-sol::TMiddle_stack::TMiddle_stack(std::vector<std::wstring> card_order, std::vector<TCard> visible_cards, std::stack<TCard> hidden_cards): TCard_stack(card_order), Visible_cards{visible_cards}, Hidden_cards{hidden_cards}
+sol::TMiddle_stack::TMiddle_stack(std::vector<std::string> card_order, std::vector<TCard> visible_cards, std::stack<TCard> hidden_cards): TCard_stack(card_order), Visible_cards{visible_cards}, Hidden_cards{hidden_cards}
 {
 
 }
@@ -17,7 +17,7 @@ bool sol::TMiddle_stack::Is_add_correct(std::vector< sol::TCard > *moved_cards)
 {
     if(Visible_cards.empty())
     {
-        if((*moved_cards)[moved_cards->size()-1].Get_type() == L"K")
+        if((*moved_cards)[moved_cards->size()-1].Get_type() == "K")
             return true;
 
         return false;

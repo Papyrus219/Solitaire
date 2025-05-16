@@ -1,3 +1,5 @@
+#ifndef TCOLORER
+#define TCOLORER
 
 #include<string>
 
@@ -9,13 +11,16 @@ namespace sol
 {
     struct TColorer
     {
-        std::wstring black{L"\033[30m"};
-        std::wstring red{L"\033[31m"};
-        std::wstring green{L"\033[32m"};
-        std::wstring yelow{L"\034[33m"};
-        std::wstring blue{L"\033[34m"};
-        std::wstring violet{L"\033[35m"};
-        std::wstring turquoise{L"\033[36m"};
-        std::wstring white{L"\033[37m"};
+        std::string normal{"\033[0m"};
+        std::string black{"\033[30m"};
+        std::string red{"\033[31m"};
+        std::string green{"\033[32m"};
+        std::string yelow{"\034[33m"};
+        std::string blue{"\033[34m"};
+        std::string violet{"\033[35m"};
+        std::string turquoise{"\033[36m"};
+        std::string white{"\033[37m"};
     };
 }
+
+#endif

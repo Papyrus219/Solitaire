@@ -6,14 +6,15 @@
 #include"dealers/tsolitare_dealer.h"
 #include"factories/tboard_factory.h"
 #include"system/tdrawer.h"
+#include"system/tcolorer.h"
+#include<print>
 
 int main()
 {
-    std::locale::global(std::locale(""));
-    std::wcout.imbue(std::locale());
+    sol::TColorer colors;
 
-    sol::TDeck deck{{L"♥",L"♦",L"♠",L"♣"},{L"A",L"1",L"2",L"3",L"4",L"5",L"6",L"7",L"8",L"9",L"10",L"J",L"Q",L"K"}};
-    deck.Set_Colors({"red","black"},{{L"♥",L"♦"},{L"♠",L"♣"}});
+    sol::TDeck deck{{"♥","♦","♠","♣"},{"A","2","3","4","5","6","7","8","9","10","J","Q","K"}};
+    deck.Set_Colors({"red","black"},{{"♥","♦"},{"♠","♣"}});
     deck.Shufle();
 
     sol::TBoard_factory board_factory;

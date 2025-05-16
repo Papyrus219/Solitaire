@@ -1,6 +1,6 @@
 #include "tcard_stack.h"
 
-sol::TCard_stack::TCard_stack(std::vector<std::wstring> card_order): Card_order{card_order}
+sol::TCard_stack::TCard_stack(std::vector<std::string> card_order): Card_order{card_order}
 {
 
 }

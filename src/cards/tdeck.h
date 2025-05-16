@@ -11,14 +11,14 @@ namespace sol
     class TDeck
     {
     public:
-        TDeck(std::vector<std::wstring> types, std::vector<std::wstring> symbols);
+        TDeck(std::vector<std::string> types, std::vector<std::string> symbols);
 
         void Shufle();
-        void Set_Colors(std::vector<std::string> colors, std::vector<std::vector<std::wstring>> symbols);
+        void Set_Colors(std::vector<std::string> colors, std::vector<std::vector<std::string>> types);
 
         std::stack<TCard> Cards;
-        std::vector<std::wstring> Card_types;
-        std::vector<std::wstring> Card_symbols;
+        std::vector<std::string> Card_types;
+        std::vector<std::string> Card_symbols;
 
     };
 

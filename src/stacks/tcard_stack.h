@@ -23,8 +23,8 @@ namespace sol
 
     protected:
         std::stack<TCard> Cards_in_stack;
-        std::vector<std::wstring> Card_order;
-        TCard_stack(std::vector<std::wstring> card_order);
+        std::vector<std::string> Card_order;
+        TCard_stack(std::vector<std::string> card_order);
     };
 }
 
