@@ -15,7 +15,7 @@ namespace sol
         std::string black{"\033[30m"};
         std::string red{"\033[31m"};
         std::string green{"\033[32m"};
-        std::string yelow{"\034[33m"};
+        std::string yelow{"\033[33m"};
         std::string blue{"\033[34m"};
         std::string violet{"\033[35m"};
         std::string turquoise{"\033[36m"};

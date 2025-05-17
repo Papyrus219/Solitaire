@@ -19,7 +19,7 @@ namespace sol
         virtual void Add_cards(std::vector<TCard> *moved_cards) override;
 
         std::string Get_type() const {return type;};
-        const std::stack<TCard>* Get_stack_constptr() const {return &Cards_in_stack;};
+        const std::stack<TCard>* Get_stack_const_ptr() const {return &Cards_in_stack;};
 
     private:
         std::string type;

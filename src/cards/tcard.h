@@ -11,6 +11,7 @@ namespace sol
     {
     public:
         TCard(std::string temp_symbol, std::string temp_type);
+        TCard(std::string temp_symbol, std::string temp_type, std::string color);
         TCard(const TCard& other);
 
         void Set_Colors(std::vector<std::string> colors, std::vector<std::vector<std::string>> types);

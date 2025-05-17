@@ -26,7 +26,7 @@ namespace sol
 
     private:
         std::queue<TCard> Hidden_cards;
-        std::vector<TCard> Visible_cards;
+        std::vector<TCard> Visible_cards{{"10","♣","black"},{"3","♥","red"},{"2","♣","black"}};
         int difficulty; //0-easy, 1-hard
     };
 }

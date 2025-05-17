@@ -7,6 +7,12 @@ sol::TCard::TCard(std::string temp_symbol, std::string temp_type): symbol{temp_s
 
 }
 
+sol::TCard::TCard(std::string temp_symbol, std::string temp_type, std::string color): symbol{temp_symbol}, type{temp_type}, color{color}
+{
+
+}
+
+
 sol::TCard::TCard(const TCard& other)
 {
     this->symbol = other.symbol;
